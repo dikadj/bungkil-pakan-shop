@@ -95,19 +95,19 @@
                             <div class="main-nav__main-navigation two float-left">
                                 <ul class="main-nav__navigation-box">
                                     <li class="current">
-                                        <a href="/">Home</a>
+                                        <a class="side-menu-btn" href="/">Home</a>
                                     </li>
                                     <li class="">
-                                        <a href="#why_us">Why Us</a>
+                                        <a class="side-menu-btn" href="#why_us">Why Us</a>
                                     </li>
                                     <li class="">
-                                        <a href="#products">Products</a>
+                                        <a class="side-menu-btn" href="#products">Products</a>
                                     </li>
                                     <li class="">
-                                        <a href="#about">About</a>
+                                        <a class="side-menu-btn" href="#about">About</a>
                                     </li>
                                     <li>
-                                        <a href="#contact">Contact</a>
+                                        <a class="side-menu-btn" href="#contact">Contact</a>
                                     </li>
                                 </ul>
                             </div>
@@ -340,37 +340,6 @@
                 </div>
             </section>
     
-            <section class="product-two">
-                <div class="product_tow_bg" style="background-image: url(assets/images/resources/product-2-bg.png)"></div>
-                <div class="container">
-                    <div class="block-title text-center">
-                        <p>Better Farm Performance</p>
-                        <h3>Tingkatkan performa ternak Anda bersama kami!</h3>
-                        <div class="leaf">
-                            <img src="assets/images/resources/leaf.png" alt="">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6 wow fadeInDown" data-wow-delay="300ms">
-                            <div class="product_two_thum">
-                                <img src="assets/images/resources/front-office.jpg" alt="">
-                                <div class="product_two_thum_hover">
-                                    <h2>Bungkil Pakan Shop</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 wow fadeInDown" data-wow-delay="600ms">
-                            <div class="product_two_thum">
-                                <img src="assets/images/resources/cowshed.jpg" alt="">
-                                <div class="product_two_thum_hover">
-                                    <h2>Pakan Bernutrisi</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-    
     
     
     
@@ -434,7 +403,7 @@
         <div class="side-menu__block-inner ">
             <div class="side-menu__top justify-content-end">
 
-                <a href="#" class="side-menu__toggler side-menu__close-btn"><img
+                <a id="side_menu_toggler" href="#" class="side-menu__toggler side-menu__close-btn"><img
                         src="assets/images/shapes/close-1-1.png" alt=""></a>
             </div><!-- /.side-menu__top -->
 
@@ -495,6 +464,11 @@
 
     <!-- template scripts -->
     <script src="assets/js/theme.js"></script>
+    <script>
+        $(".side-menu-btn").on("click", () => {
+            $("#side_menu_toggler").trigger("click")
+        })
+    </script>
 </body>
 
 </html>
